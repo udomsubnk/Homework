@@ -56,7 +56,7 @@ class Carousel extends Component {
 	render() {
 		return (
 			<div>
-				<div id="carousel">
+				<div className="Carousel">
 					<div className="carousel-item crs-first">{this.getData(this.state.crsFirst)}</div>
 					<div className="carousel-item crs-second">{this.getData(this.state.crsSecond)}</div>
 					<div className="carousel-item crs-third">{this.getData(this.state.crsThird)}</div>
