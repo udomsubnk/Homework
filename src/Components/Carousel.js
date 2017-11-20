@@ -9,76 +9,59 @@ class Carousel extends Component {
 	    super(props);
 	    console.log(data);
 	    this.state = {
-	    	count: 0,
-				crsFirst: "",
-				crsSecond: "",
+	    	crsFirst:0,
+	    	crsSecond:1,
+	    	crsThird: 2,
+	    	crsFourth: 3,
+	    	crsFifth: 4
 	    };
-	    this.state.crsThird = data[this.state.count].firstName;
-	    this.state.crsFourth = data[this.state.count+1].firstName;
-	    this.state.crsFifth = data[this.state.count+2].firstName;
+	    data.unshift("");
+	    data.unshift("");
+	    data.push("");
+	    data.push("");
 
 	    this.up = this.up.bind(this);
 	    this.down = this.down.bind(this);
 	}
+	getData = function(index){
+		return data[index].firstName;
+  }
 	up = function(e){
 		e.preventDefault();
-		this.setState((prevState) => {
-			if( this.state.count -3 >= 0 ){
+		if( this.state.crsFirst > 0 ){
+			this.setState((prevState) => {
 				return {
-						count: prevState.count - 1,
-				  	crsFifth: prevState.crsFourth,
-				  	crsFourth: prevState.crsThird,
-				  	crsThird: prevState.crsSecond,
-				  	crsSecond: prevState.crsFirst,
-				  	crsFirst: data[this.state.count-2].firstName
+					crsFirst: prevState.crsFirst -1 ,
+		    	crsSecond: prevState.crsSecond -1,
+		    	crsThird: prevState.crsThird -1,
+		    	crsFourth: prevState.crsFourth -1,
+		    	crsFifth: prevState.crsFifth -1
 			  }
-			}else if( this.state.count -3 >= -2 ){
-				return {
-						count: prevState.count - 1,
-				  	crsFifth: prevState.crsFourth,
-				  	crsFourth: prevState.crsThird,
-				  	crsThird: prevState.crsSecond,
-				  	crsSecond: prevState.crsFirst,
-				  	crsFirst: ""
-			  }
-			}
-		});
+			})
+		}
 	}
 	down = function(e){
 		e.preventDefault();
-		if( this.state.count + 3 <= data.length ){
+		if( this.state.crsFifth < data.length -1 )
 			this.setState((prevState) => {
 				return {
-						count: prevState.count + 1,
-				  	crsFirst: prevState.crsSecond,
-				  	crsSecond: prevState.crsThird,
-				  	crsThird: prevState.crsFourth,
-				  	crsFourth: prevState.crsFifth,
-				  	crsFifth: data[this.state.count+2].firstName
-				  }
+  				crsFirst: prevState.crsFirst +1 ,
+  	    	crsSecond: prevState.crsSecond +1,
+  	    	crsThird: prevState.crsThird +1,
+  	    	crsFourth: prevState.crsFourth +1,
+  	    	crsFifth: prevState.crsFifth +1
+			  }
 			});
-		}else if( this.state.count + 3 === data.length + 1 || this.state.count + 3 === data.length + 2){
-			this.setState((prevState) => {
-				return {
-						count: prevState.count + 1,
-				  	crsFirst: prevState.crsSecond,
-				  	crsSecond: prevState.crsThird,
-				  	crsThird: prevState.crsFourth,
-				  	crsFourth: prevState.crsFifth,
-				  	crsFifth: ""
-				  }
-			});
-		}
 	}
 	render() {
 		return (
 			<div>
 				<div id="carousel">
-					<div className="carousel-item crs-first">{this.state.crsFirst}</div>
-					<div className="carousel-item crs-second">{this.state.crsSecond}</div>
-					<div className="carousel-item crs-third">{this.state.crsThird}</div>
-					<div className="carousel-item crs-fourth">{this.state.crsFourth}</div>
-					<div className="carousel-item crs-fifth">{this.state.crsFifth}</div>
+					<div className="carousel-item crs-first">{this.getData(this.state.crsFirst)}</div>
+					<div className="carousel-item crs-second">{this.getData(this.state.crsSecond)}</div>
+					<div className="carousel-item crs-third">{this.getData(this.state.crsThird)}</div>
+					<div className="carousel-item crs-fourth">{this.getData(this.state.crsFourth)}</div>
+					<div className="carousel-item crs-fifth">{this.getData(this.state.crsFifth)}</div>
 				</div>
 				<button onClick={this.up}>Up</button>
 				<button onClick={this.down}>Down</button>
