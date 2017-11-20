@@ -5,8 +5,12 @@
 
 .carousel-item{
 	border: 1px solid black;
-	background-color: yellow;
+	background-color: #FFEBB6;
 	position: absolute;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
 }
 .crs-first{
 	height: 60px;

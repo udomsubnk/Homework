@@ -1,13 +1,24 @@
 import React, { Component } from 'react';
+import data from '../Assets/data';
 
 class Carousel extends Component {
+	componentWillMount(){
+
+	}
 	constructor(props) {
 	    super(props);
-	    this.state = {};
+	    console.log(data);
+	    this.state = {
+	    	crsFirst: "",
+	    	crsSecond: "",
+	    	crsThird: data[0].firstName,
+	    	crsFourth: data[1].firstName,
+	    	crsFifth: data[2].firstName
+	    };
 	}
 	up = function(e){
 		e.preventDefault();
-		document.getElementById("crsFirst").style.transform = "rotate(117deg)";
+		
 	}
 	down = function(e){
 		e.preventDefault();
@@ -17,11 +28,11 @@ class Carousel extends Component {
 		return (
 			<div>
 				<div id="carousel">
-					<div className="carousel-item crs-first" id="crsFirst">A</div>
-					<div className="carousel-item crs-second" id="crsSecond">B</div>
-					<div className="carousel-item crs-third" id="crsThird">C</div>
-					<div className="carousel-item crs-fourth" id="crsFourth">D</div>
-					<div className="carousel-item crs-fifth" id="crsFifth">E</div>
+					<div className="carousel-item crs-first">{this.state.crsFirst}</div>
+					<div className="carousel-item crs-second">{this.state.crsSecond}</div>
+					<div className="carousel-item crs-third">{this.state.crsThird}</div>
+					<div className="carousel-item crs-fourth">{this.state.crsFourth}</div>
+					<div className="carousel-item crs-fifth">{this.state.crsFifth}</div>
 				</div>
 				<button onClick={this.up}>Up</button>
 				<button onClick={this.down}>Down</button>
