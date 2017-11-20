@@ -1,5 +1,44 @@
 #carousel{
   height: 400px;
   width: 100%;
-  border: 2px solid black;
+}
+
+.carousel-item{
+	border: 1px solid black;
+	background-color: yellow;
+	position: absolute;
+}
+.crs-first{
+	height: 60px;
+	width: 60%;
+	margin-left: 20%;
+	top: 0;
+	z-index: -2;
+}
+.crs-second{
+	height: 80px;
+	width: 80%;
+	margin-left: 10%;
+	top: 40px;
+	z-index: -1;
+}
+.crs-third{
+	height: 100px;
+	width: 100%;
+	top: 100px;
+	z-index: 0;
+}
+.crs-fourth{
+	height: 80px;
+	width: 80%;
+	margin-left: 10%;
+	top: 180px;
+	z-index: -1;
+}
+.crs-fifth{
+	height: 60px;
+	width: 60%;
+	margin-left: 20%;
+	top: 240px;
+	z-index: -2;
 }

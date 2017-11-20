@@ -4,7 +4,13 @@ class Carousel extends Component {
   render() {
     return (
       <div id="carousel">
-        Hello world!!
+        
+		<div className="carousel-item crs-first">A</div>
+		<div className="carousel-item crs-second">B</div>
+		<div className="carousel-item crs-third">C</div>
+		<div className="carousel-item crs-fourth">D</div>
+		<div className="carousel-item crs-fifth">E</div>
+
       </div>
     );
   }
