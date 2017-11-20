@@ -4,3 +4,8 @@ body {
   font-family: sans-serif;
   text-align: center;
 }
+.Landing{
+	background: url(/images/bg-front.png) 0% 0% / contain repeat, url(/images/bg.png) repeat;
+	height: 100vh;
+	width: 100%;
+}
