@@ -2,13 +2,12 @@ body {
 	margin: 0;
 	padding: 0;
 	text-align: center;
-	font-family: 'Kanit', sans-serif;
-	font-weight: 200;
-	color: #ffffff;
+	font-family: 'Kanit', sans-serif !important;
+	font-weight: 200 !important;
+	color: #ffffff !important;
 }
 .Landing{
 	background: url(/images/bg-front.png) 0% 0% / contain repeat, url(/images/bg.png) repeat;
-	height: 100vh;
 	width: 100%;
 }
 .Carousel{
