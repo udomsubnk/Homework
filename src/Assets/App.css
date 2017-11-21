@@ -4,36 +4,42 @@
 	margin: auto;
 	color: black;
 	margin-top: -10px;
+	position:relative
 }
 .crs-first{
 	height: 40px;
 	width: 60%;
 	z-index: 98;
 	border-radius: 5px;
+	font-size: 0.8rem;
 }
 .crs-second{
 	height: 60px;
 	width: 80%;
 	z-index: 99;
 	border-radius: 10px;
+	font-size: 1.2rem;
 }
 .crs-third{
 	height: 80px;
 	width: 100%;
 	z-index: 100;
 	border-radius: 15px;
+	font-size: 2rem;
 }
 .crs-fourth{
 	height: 60px;
 	width: 80%;
 	z-index: 99;
 	border-radius: 10px;
+	font-size: 1.2rem;
 }
 .crs-fifth{
 	height: 40px;
 	width: 60%;
 	z-index: 98;
 	border-radius: 5px;
+	font-size: 0.8rem;
 }
 
 
