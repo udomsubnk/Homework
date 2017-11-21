@@ -23,11 +23,17 @@ class Carousel extends Component {
 	    this.up = this.up.bind(this);
 	    this.down = this.down.bind(this);
 	}
-	getData = function(index){
-		return data[index].firstName;
+	getName = function(index){
+		return data[index].firstName + "	" + data[index].lastName;
+  }
+  getCode = function(index){
+		return data[index].interviewRef;
+  }
+  getMajor = function(index){
+		return data[index].major;
   }
   hideClass = function(index){
-		return ( data[index].firstName === undefined )?'hide':'flexbox';
+		return ( data[index].firstName === undefined )?'hide':'';
   }
 	up = function(e){
 		e.preventDefault();
@@ -60,15 +66,45 @@ class Carousel extends Component {
 	render() {
 		return (
 			<div className="Carousel">
-				<button onClick={this.up}>Up</button>
+				<button className="btn btn-primary" onClick={this.up}>Up</button>
 				<div className="Carousel-display">
-					<div className={"Carousel-item crs-first flexbox flex-center " + this.hideClass(this.state.crsFirst)}>{this.getData(this.state.crsFirst)}</div>
-					<div className={"Carousel-item crs-second flexbox flex-center " + this.hideClass(this.state.crsSecond)}>{this.getData(this.state.crsSecond)}</div>
-					<div className={"Carousel-item crs-third flexbox flex-center "}>{this.getData(this.state.crsThird)}</div>
-					<div className={"Carousel-item crs-fourth flexbox flex-center " + this.hideClass(this.state.crsFourth)}>{this.getData(this.state.crsFourth)}</div>
-					<div className={"Carousel-item crs-fifth flexbox flex-center " + this.hideClass(this.state.crsFifth)}>{this.getData(this.state.crsFifth)}</div>
+					<div className={"Carousel-item crs-first " + this.hideClass(this.state.crsFirst)}>
+						<div className="row Carousel-item-text">
+							<div className="col hidden-xs">{this.getCode(this.state.crsFirst)}</div>
+							<div className="col-sm-6 col-xs-12">{this.getName(this.state.crsFirst)}</div>
+							<div className="col hidden-xs">{this.getMajor(this.state.crsFirst)}</div>
+						</div>
+					</div>
+					<div className={"Carousel-item crs-second " + this.hideClass(this.state.crsSecond)}>
+						<div className="row Carousel-item-text">
+							<div className="col hidden-xs">{this.getCode(this.state.crsSecond)}</div>
+							<div className="col-sm-6 col-xs-12">{this.getName(this.state.crsSecond)}</div>
+							<div className="col hidden-xs">{this.getMajor(this.state.crsSecond)}</div>
+						</div>
+					</div>
+					<div className={"Carousel-item crs-third "}>
+						<div className="row Carousel-item-text">
+							<div className="col hidden-xs">{this.getCode(this.state.crsThird)}</div>
+							<div className="col-sm-6 col-xs-12">{this.getName(this.state.crsThird)}</div>
+							<div className="col hidden-xs">{this.getMajor(this.state.crsThird)}</div>
+						</div>
+					</div>
+					<div className={"Carousel-item crs-fourth " + this.hideClass(this.state.crsFourth)}>
+						<div className="row Carousel-item-text">
+							<div className="col hidden-xs">{this.getCode(this.state.crsFourth)}</div>
+							<div className="col-sm-6 col-xs-12">{this.getName(this.state.crsFourth)}</div>
+							<div className="col hidden-xs">{this.getMajor(this.state.crsFourth)}</div>
+						</div>
+					</div>
+					<div className={"Carousel-item crs-fifth " + this.hideClass(this.state.crsFifth)}>
+						<div className="row Carousel-item-text">
+							<div className="col hidden-xs">{this.getCode(this.state.crsFifth)}</div>
+							<div className="col-sm-6 col-xs-12">{this.getName(this.state.crsFifth)}</div>
+							<div className="col hidden-xs">{this.getMajor(this.state.crsFifth)}</div>
+						</div>
+					</div>
 				</div>
-				<button onClick={this.down}>Down</button>
+				<button className="btn btn-primary" onClick={this.down}>Down</button>
 			</div>
 		);
   }

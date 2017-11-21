@@ -6,13 +6,23 @@
 	border: 1px solid #5AFEED;
 	background-image: url(/images/bg.png);
 	margin: auto;
-	position:relative
+	position:relative;
+}
+.Carousel-item-text{
+	padding: 10px;
+	height: inherit;
+}
+.Carousel-item-text > div{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
 }
 .crs-first{
 	height: 40px;
 	width: 60%;
 	z-index: 98;
-	border-radius: 5px;
+	border-radius: 7px;
 	font-size: 0.7rem;
 }
 .crs-second{
@@ -43,7 +53,7 @@
 	height: 40px;
 	width: 60%;
 	z-index: 98;
-	border-radius: 5px;
+	border-radius: 7px;
 	margin-top: -10px;
 	font-size: 0.7rem;
 }
@@ -62,6 +72,15 @@
 .font-2rem{
 	font-size: 2rem !important;
 }
+.font-1_2rem{
+	font-size: 1.2rem !important;
+}
+.font-1rem{
+	font-size: 1rem !important;
+}
+.font-0_7rem{
+	font-size: 0.7rem !important;
+}
 .content-block{
 	max-width: 768px;
 	margin: auto;
@@ -74,9 +93,17 @@
 	flex-direction: column;
 	text-align: center;
 }
-.landing-content{
-	/*margin-top: 100px;*/
-}
 .hide{
 	visibility: hidden;
+}
+@media (max-width: 576px){
+	.font-3rem{
+		font-size: 2rem !important;
+	}
+	.font-2rem{
+		font-size: 1rem !important;
+	}
+	.hidden-xs{
+		display: none !important;
+	}
 }
