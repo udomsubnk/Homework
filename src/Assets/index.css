@@ -9,6 +9,7 @@ body {
 .Landing{
 	background: url(/images/bg-front.png) 0% 0% / contain repeat, url(/images/bg.png) repeat;
 	width: 100%;
+	height: 100vh;
 }
 .Carousel{
 	height: 300px;

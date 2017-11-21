@@ -55,4 +55,18 @@
 .font-2rem{
 	font-size: 2rem !important;
 }
-
+.content-block{
+	max-width: 768px;
+	margin: auto;
+}
+.flexbox{
+	display: flex;
+}
+.flex-center{
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+}
+.landing-content{
+	margin-top: 100px;
+}
