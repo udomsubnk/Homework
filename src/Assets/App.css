@@ -115,8 +115,14 @@
 .programming-color{
 	color: #68C375;
 }
+.ywc-blue-color{
+	color: #5AFEED
+}
 .down-button{
-	margin-top: 40px;
+	margin-top: 20px;
+}
+.hoverable{
+	cursor: pointer;
 }
 @media (max-width: 576px){
 	.font-3rem{

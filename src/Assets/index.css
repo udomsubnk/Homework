@@ -10,6 +10,7 @@ body {
 	background: url(/images/bg-front.png) 0% 0% / contain repeat, url(/images/bg.png) repeat;
 	width: 100%;
 	height: 100vh;
+	max-height: 750px;
 }
 .Carousel{
 	margin-top: 30px;

@@ -68,7 +68,7 @@ class Carousel extends Component {
 	render() {
 		return (
 			<div className="Carousel">
-				<button className="btn btn-primary" onClick={this.up}>Up</button>
+				<i className="fa fa-caret-up font-3rem ywc-blue-color hoverable" onClick={this.up} aria-hidden="true"></i>
 				<div className="Carousel-display">
 					<div className={"Carousel-item crs-first " + this.getClass(this.state.crsFirst)}>
 						<div className="row Carousel-item-text">
@@ -106,7 +106,7 @@ class Carousel extends Component {
 						</div>
 					</div>
 				</div>
-				<button className="btn btn-primary" onClick={this.down}>Down</button>
+				<i className="fa fa-caret-down font-3rem ywc-blue-color hoverable" onClick={this.down} aria-hidden="true"></i>
 			</div>
 		);
   }

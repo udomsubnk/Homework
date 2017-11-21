@@ -12,7 +12,7 @@ class Landing extends Component {
 		        <Carousel></Carousel>
 		        <div className="down-button">
 							<p className="color-e2e2e2">ดูรายชื่อทั้งหมด</p>
-							<i>eiei</i>
+							<i className="fa fa-chevron-down font-2rem color-e2e2e2 hoverable" aria-hidden="true"></i>
 		        </div>
 	        </div>
       </div>
