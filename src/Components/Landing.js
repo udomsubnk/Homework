@@ -10,6 +10,10 @@ class Landing extends Component {
 		        <h1 className="font-200 font-3rem">ประกาศผู้มีสิทธิ์เข้าสัมภาษณ์</h1>
 		        <h2 className="font-2rem">โครงการ Young Webmaster Camp 15</h2>
 		        <Carousel></Carousel>
+		        <div className="down-button">
+							<p className="color-e2e2e2">ดูรายชื่อทั้งหมด</p>
+							<i>eiei</i>
+		        </div>
 	        </div>
       </div>
     );
