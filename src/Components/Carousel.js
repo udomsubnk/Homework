@@ -57,11 +57,11 @@ class Carousel extends Component {
 		return (
 			<div>
 				<div className="Carousel">
-					<div className="carousel-item crs-first">{this.getData(this.state.crsFirst)}</div>
-					<div className="carousel-item crs-second">{this.getData(this.state.crsSecond)}</div>
-					<div className="carousel-item crs-third">{this.getData(this.state.crsThird)}</div>
-					<div className="carousel-item crs-fourth">{this.getData(this.state.crsFourth)}</div>
-					<div className="carousel-item crs-fifth">{this.getData(this.state.crsFifth)}</div>
+					<div className="Carousel-item crs-first flexbox flex-center">{this.getData(this.state.crsFirst)}</div>
+					<div className="Carousel-item crs-second flexbox flex-center">{this.getData(this.state.crsSecond)}</div>
+					<div className="Carousel-item crs-third flexbox flex-center">{this.getData(this.state.crsThird)}</div>
+					<div className="Carousel-item crs-fourth flexbox flex-center">{this.getData(this.state.crsFourth)}</div>
+					<div className="Carousel-item crs-fifth flexbox flex-center">{this.getData(this.state.crsFifth)}</div>
 				</div>
 				<button onClick={this.up}>Up</button>
 				<button onClick={this.down}>Down</button>

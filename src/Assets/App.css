@@ -1,47 +1,42 @@
-.carousel-item{
+.Carousel-item{
 	border: 1px solid black;
 	background-color: #FFEBB6;
-	position: absolute;
-	/*display: flex;*/
-	display: none;
-	justify-content: center;
-	flex-direction: column;
-	text-align: center;
+	margin: auto;
+	color: black;
+	margin-top: -10px;
 }
 .crs-first{
-	height: 60px;
+	height: 40px;
 	width: 60%;
-	margin-left: 20%;
-	top: 0;
-	z-index: -2;
+	z-index: 98;
+	border-radius: 5px;
 }
 .crs-second{
-	height: 80px;
+	height: 60px;
 	width: 80%;
-	margin-left: 10%;
-	top: 40px;
-	z-index: -1;
+	z-index: 99;
+	border-radius: 10px;
 }
 .crs-third{
-	height: 100px;
+	height: 80px;
 	width: 100%;
-	top: 100px;
-	z-index: 0;
+	z-index: 100;
+	border-radius: 15px;
 }
 .crs-fourth{
-	height: 80px;
+	height: 60px;
 	width: 80%;
-	margin-left: 10%;
-	top: 180px;
-	z-index: -1;
+	z-index: 99;
+	border-radius: 10px;
 }
 .crs-fifth{
-	height: 60px;
+	height: 40px;
 	width: 60%;
-	margin-left: 20%;
-	top: 240px;
-	z-index: -2;
+	z-index: 98;
+	border-radius: 5px;
 }
+
+
 .logo{
 	height: 90px;
 	margin: 20px auto;
