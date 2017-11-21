@@ -24,6 +24,7 @@
 	z-index: 98;
 	border-radius: 7px;
 	font-size: 0.7rem;
+	color: #BFC0C3;
 }
 .crs-second{
 	height: 60px;
@@ -32,6 +33,7 @@
 	border-radius: 10px;
 	margin-top: -10px;
 	font-size: 1.2rem;
+	color: #BBBEC7;
 }
 .crs-third{
 	height: 80px;
@@ -48,6 +50,7 @@
 	border-radius: 10px;
 	margin-top: -20px;
 	font-size: 1.2rem;
+	color: #BBBEC7;
 }
 .crs-fifth{
 	height: 40px;
@@ -56,6 +59,7 @@
 	border-radius: 7px;
 	margin-top: -10px;
 	font-size: 0.7rem;
+	color: #BFC0C3;
 }
 
 
@@ -96,6 +100,19 @@
 .hide{
 	visibility: hidden;
 }
+.content-color{
+	color: #367AEF;
+}
+.design-color{
+	color: #E0F357;
+}
+.marketing-color{
+	color: #E7494E;
+}
+.programming-color{
+	color: #68C375;
+}
+
 @media (max-width: 576px){
 	.font-3rem{
 		font-size: 2rem !important;
