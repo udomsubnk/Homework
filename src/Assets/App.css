@@ -72,5 +72,5 @@
 	margin-top: 100px;
 }
 .hide{
-	display: none !important;
+	visibility: hidden;
 }
