@@ -88,6 +88,7 @@
 .content-block{
 	max-width: 768px;
 	margin: auto;
+	margin-top: 20px;
 }
 .flexbox{
 	display: flex;
@@ -115,12 +116,20 @@
 
 @media (max-width: 576px){
 	.font-3rem{
-		font-size: 2rem !important;
+		font-size: 2.2rem !important;
 	}
 	.font-2rem{
-		font-size: 1rem !important;
+		font-size: 1.2rem !important;
 	}
 	.hidden-xs{
 		display: none !important;
+	}
+}
+@media (max-height: 600px){
+	.hidden-vh-less{
+		display: none !important;
+	}
+	.Landing{
+		height: auto;
 	}
 }
