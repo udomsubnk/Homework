@@ -31,6 +31,20 @@ class Carousel extends Component {
   }
 	up = function(e){
 		e.preventDefault();
+		if( this.state.crsFifth < data.length -1 ){
+			this.setState((prevState) => {
+				return {
+  				crsFirst: prevState.crsFirst +1 ,
+  	    	crsSecond: prevState.crsSecond +1,
+  	    	crsThird: prevState.crsThird +1,
+  	    	crsFourth: prevState.crsFourth +1,
+  	    	crsFifth: prevState.crsFifth +1
+			  }
+			});
+		}
+	}
+	down = function(e){
+		e.preventDefault();
 		if( this.state.crsFirst > 0 ){
 			this.setState((prevState) => {
 				return {
@@ -42,19 +56,6 @@ class Carousel extends Component {
 			  }
 			})
 		}
-	}
-	down = function(e){
-		e.preventDefault();
-		if( this.state.crsFifth < data.length -1 )
-			this.setState((prevState) => {
-				return {
-  				crsFirst: prevState.crsFirst +1 ,
-  	    	crsSecond: prevState.crsSecond +1,
-  	    	crsThird: prevState.crsThird +1,
-  	    	crsFourth: prevState.crsFourth +1,
-  	    	crsFifth: prevState.crsFifth +1
-			  }
-			});
 	}
 	render() {
 		return (
