@@ -1,9 +1,11 @@
+.Carousel-display{
+	width: 100%;
+	margin: 10px 0;
+}
 .Carousel-item{
-	border: 1px solid black;
-	background-color: #FFEBB6;
+	border: 1px solid #5AFEED;
+	background-image: url(/images/bg.png);
 	margin: auto;
-	color: black;
-	margin-top: -10px;
 	position:relative
 }
 .crs-first{
@@ -18,6 +20,7 @@
 	width: 80%;
 	z-index: 99;
 	border-radius: 10px;
+	margin-top: -10px;
 	font-size: 1.2rem;
 }
 .crs-third{
@@ -25,6 +28,7 @@
 	width: 100%;
 	z-index: 100;
 	border-radius: 15px;
+	margin-top: -20px;
 	font-size: 2rem;
 }
 .crs-fourth{
@@ -32,6 +36,7 @@
 	width: 80%;
 	z-index: 99;
 	border-radius: 10px;
+	margin-top: -20px;
 	font-size: 1.2rem;
 }
 .crs-fifth{
@@ -39,6 +44,7 @@
 	width: 60%;
 	z-index: 98;
 	border-radius: 5px;
+	margin-top: -10px;
 	font-size: 0.7rem;
 }
 
@@ -69,7 +75,7 @@
 	text-align: center;
 }
 .landing-content{
-	margin-top: 100px;
+	/*margin-top: 100px;*/
 }
 .hide{
 	visibility: hidden;

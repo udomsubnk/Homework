@@ -12,7 +12,5 @@ body {
 	height: 100vh;
 }
 .Carousel{
-	width: 100%;
-	margin: 20px 0 10px;
-
+	margin-top: 20px;
 }

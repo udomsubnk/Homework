@@ -31,20 +31,6 @@ class Carousel extends Component {
   }
 	up = function(e){
 		e.preventDefault();
-		if( this.state.crsFifth < data.length -1 ){
-			this.setState((prevState) => {
-				return {
-  				crsFirst: prevState.crsFirst +1 ,
-  	    	crsSecond: prevState.crsSecond +1,
-  	    	crsThird: prevState.crsThird +1,
-  	    	crsFourth: prevState.crsFourth +1,
-  	    	crsFifth: prevState.crsFifth +1
-			  }
-			});
-		}
-	}
-	down = function(e){
-		e.preventDefault();
 		if( this.state.crsFirst > 0 ){
 			this.setState((prevState) => {
 				return {
@@ -57,11 +43,25 @@ class Carousel extends Component {
 			})
 		}
 	}
+	down = function(e){
+		e.preventDefault();
+		if( this.state.crsFifth < data.length -1 ){
+			this.setState((prevState) => {
+				return {
+  				crsFirst: prevState.crsFirst +1 ,
+  	    	crsSecond: prevState.crsSecond +1,
+  	    	crsThird: prevState.crsThird +1,
+  	    	crsFourth: prevState.crsFourth +1,
+  	    	crsFifth: prevState.crsFifth +1
+			  }
+			});
+		}
+	}
 	render() {
 		return (
-			<div>
+			<div className="Carousel">
 				<button onClick={this.up}>Up</button>
-				<div className="Carousel">
+				<div className="Carousel-display">
 					<div className={"Carousel-item crs-first flexbox flex-center " + this.hideClass(this.state.crsFirst)}>{this.getData(this.state.crsFirst)}</div>
 					<div className={"Carousel-item crs-second flexbox flex-center " + this.hideClass(this.state.crsSecond)}>{this.getData(this.state.crsSecond)}</div>
 					<div className={"Carousel-item crs-third flexbox flex-center "}>{this.getData(this.state.crsThird)}</div>
