@@ -42,6 +42,7 @@
 	border-radius: 15px;
 	margin-top: -20px;
 	font-size: 2rem;
+    box-shadow: 0.5px 0.5px 12px rgba(102,252,241,0.63);
 }
 .crs-fourth{
 	height: 60px;
