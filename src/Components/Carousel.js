@@ -17,13 +17,12 @@ class Carousel extends Component {
 		    this.Data.push('')
 		    this.forceUpdate();
 		})
-		this.setState((prevState) => {});
 	}
 	constructor(props) {
 	    super(props);
 	    this.state = {
-	    	crsFirst:0,
-	    	crsSecond:1,
+	    	crsFirst: 0,
+	    	crsSecond: 1,
 	    	crsThird: 2,
 	    	crsFourth: 3,
 	    	crsFifth: 4
