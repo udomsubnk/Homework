@@ -7,7 +7,6 @@ class Carousel extends Component {
 	}
 	constructor(props) {
 	    super(props);
-	    console.log(data);
 	    this.state = {
 	    	crsFirst:0,
 	    	crsSecond:1,
@@ -25,18 +24,18 @@ class Carousel extends Component {
 	}
 	getName = function(index){
 		return data[index].firstName + '	' + data[index].lastName;
-  }
-  getCode = function(index){
+  	}
+  	getCode = function(index){
 		return data[index].interviewRef;
-  }
-  getMajor = function(index){
+ 	}
+  	getMajor = function(index){
 		return data[index].major;
-  }
-  getClass = function(index){
+  	}
+  	getClass = function(index){
 		if ( data[index].firstName === undefined )
 			return 'hide';
 		else return '';
-  }
+  	}
 	up = function(e){
 		e.preventDefault();
 		if( this.state.crsFirst > 0 ){
