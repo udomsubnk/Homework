@@ -5,13 +5,17 @@ body {
 	font-family: 'Kanit', sans-serif !important;
 	font-weight: 200 !important;
 	color: #ffffff !important;
+	background: url(/images/bg-front.png) 0% 0% / contain repeat, url(/images/bg.png) repeat;
 }
 .Landing{
-	background: url(/images/bg-front.png) 0% 0% / contain repeat, url(/images/bg.png) repeat;
 	width: 100%;
 	height: 100vh;
 	max-height: 750px;
 }
 .Carousel{
 	margin-top: 30px;
+}
+.Detail{
+	margin-top: 30px;
+	height: 100vh;
 }
