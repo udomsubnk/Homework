@@ -1,8 +1,19 @@
 import React, { Component } from 'react';
-import data from '../Assets/data';
+import axios from 'axios';
+import fakeData from '../Assets/data';
 
 class Carousel extends Component {
+	Data = fakeData;
+
 	componentWillMount(){
+		axios.get('https://ywc15.ywc.in.th/api/interview')
+		.then( response => {
+		    this.Data = response.data;
+		    this.Data.unshift('')
+		    this.Data.unshift('')
+		    this.Data.push('')
+		    this.Data.push('')
+		})
 		this.setState((prevState) => {});
 	}
 	constructor(props) {
@@ -14,25 +25,21 @@ class Carousel extends Component {
 	    	crsFourth: 3,
 	    	crsFifth: 4
 	    };
-	    data.unshift("");
-	    data.unshift("");
-	    data.push("");
-	    data.push("");
 
 	    this.up = this.up.bind(this);
 	    this.down = this.down.bind(this);
 	}
 	getName = function(index){
-		return data[index].firstName + '	' + data[index].lastName;
+		return this.Data[index].firstName + '	' + this.Data[index].lastName;
   	}
   	getCode = function(index){
-		return data[index].interviewRef;
+		return this.Data[index].interviewRef;
  	}
   	getMajor = function(index){
-		return data[index].major;
+		return this.Data[index].major;
   	}
   	getClass = function(index){
-		if ( data[index].firstName === undefined )
+		if ( this.Data[index].firstName === undefined )
 			return 'hide';
 		else return '';
   	}
@@ -52,7 +59,7 @@ class Carousel extends Component {
 	}
 	down = function(e){
 		e.preventDefault();
-		if( this.state.crsFifth < data.length -1 ){
+		if( this.state.crsFifth < this.Data.length -1 ){
 			this.setState((prevState) => {
 				return {
   				crsFirst: prevState.crsFirst +1 ,
