@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import fakeData from '../Assets/data';
-import _ from 'lodash';
 
 class Carousel extends Component {
 	Data = fakeData;
