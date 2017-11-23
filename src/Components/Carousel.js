@@ -10,7 +10,6 @@ class Carousel extends Component {
 		axios.get('https://ywc15.ywc.in.th/api/interview')
 		.then( response => {
 		    this.Data = response.data;
-		    this.Data = _.sortBy(this.Data, (o) => { return o.interviewRef; })
 		    this.Data.unshift('')
 		    this.Data.unshift('')
 		    this.Data.push('')
