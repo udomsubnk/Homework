@@ -15,10 +15,14 @@ class Detail extends Component {
         this.Data.all = response.data;
         this.backupData = response.data.slice();
         this.Data.all = _.sortBy(this.Data, function(o) { return o.interviewRef; })[0];
-        this.Data.content = _.filter(this.Data.all, ['major', 'content'])
-        this.Data.design = _.filter(this.Data.all, ['major', 'design'])
-        this.Data.marketing = _.filter(this.Data.all, ['major', 'marketing'])
-        this.Data.programming = _.filter(this.Data.all, ['major', 'programming'])
+        var content = _.filter(response.data, ['major', 'content'])
+        this.Data.content = _.sortBy(content, function(o) { return o.interviewRef; })
+        var design = _.filter(response.data, ['major', 'design'])
+        this.Data.design = _.sortBy(design, function(o) { return o.interviewRef; })
+        var marketing = _.filter(response.data, ['major', 'marketing'])
+        this.Data.marketing = _.sortBy(marketing, function(o) { return o.interviewRef; })
+        var programming = _.filter(response.data, ['major', 'programming'])
+        this.Data.programming = _.sortBy(programming, function(o) { return o.interviewRef; })
         this.forceUpdate();
     })
   }
@@ -37,29 +41,48 @@ class Detail extends Component {
           
         <div className="content-block">
           <button >eiei</button>
+          <div className="major-logo">
+            <img src="/images/content.png" alt=""/>
+            <h2>Web Content</h2>
+          </div>
           <BootstrapTable data={this.Data.content} hover>
             <TableHeaderColumn isKey dataField='interviewRef' dataAlign='center' dataSort>รหัส</TableHeaderColumn>
             <TableHeaderColumn dataField='firstName' dataAlign='center' dataSort>ชื่อ</TableHeaderColumn>
             <TableHeaderColumn dataField='lastName' dataAlign='center' dataSort>นามสกุล</TableHeaderColumn>
-            <TableHeaderColumn dataField='major' dataAlign='center' dataSort>สาขา</TableHeaderColumn>
+            <TableHeaderColumn dataField='major' dataAlign='center'>สาขา</TableHeaderColumn>
           </BootstrapTable>
+
+          <div className="major-logo">
+            <img src="/images/design.png" alt=""/>
+            <h2>Web Design</h2>
+          </div>
           <BootstrapTable data={this.Data.design} hover>
             <TableHeaderColumn isKey dataField='interviewRef' dataAlign='center' dataSort>รหัส</TableHeaderColumn>
             <TableHeaderColumn dataField='firstName' dataAlign='center' dataSort>ชื่อ</TableHeaderColumn>
             <TableHeaderColumn dataField='lastName' dataAlign='center' dataSort>นามสกุล</TableHeaderColumn>
-            <TableHeaderColumn dataField='major' dataAlign='center' dataSort>สาขา</TableHeaderColumn>
+            <TableHeaderColumn dataField='major' dataAlign='center'>สาขา</TableHeaderColumn>
           </BootstrapTable>
+
+          <div className="major-logo">
+            <img src="/images/marketing.png" alt=""/>
+            <h2>Web Marketing</h2>
+          </div>
           <BootstrapTable data={this.Data.marketing} hover>
             <TableHeaderColumn isKey dataField='interviewRef' dataAlign='center' dataSort>รหัส</TableHeaderColumn>
             <TableHeaderColumn dataField='firstName' dataAlign='center' dataSort>ชื่อ</TableHeaderColumn>
             <TableHeaderColumn dataField='lastName' dataAlign='center' dataSort>นามสกุล</TableHeaderColumn>
-            <TableHeaderColumn dataField='major' dataAlign='center' dataSort>สาขา</TableHeaderColumn>
+            <TableHeaderColumn dataField='major' dataAlign='center'>สาขา</TableHeaderColumn>
           </BootstrapTable>
+
+          <div className="major-logo">
+            <img src="/images/programming.png" alt=""/>
+            <h2>Web Programming</h2>
+          </div>
           <BootstrapTable data={this.Data.programming} hover>
             <TableHeaderColumn isKey dataField='interviewRef' dataAlign='center' dataSort>รหัส</TableHeaderColumn>
             <TableHeaderColumn dataField='firstName' dataAlign='center' dataSort>ชื่อ</TableHeaderColumn>
             <TableHeaderColumn dataField='lastName' dataAlign='center' dataSort>นามสกุล</TableHeaderColumn>
-            <TableHeaderColumn dataField='major' dataAlign='center' dataSort>สาขา</TableHeaderColumn>
+            <TableHeaderColumn dataField='major' dataAlign='center'>สาขา</TableHeaderColumn>
           </BootstrapTable>
         </div>
       </div>
