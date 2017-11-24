@@ -129,12 +129,6 @@
 .search{
 	width: 100%;
 	margin: auto;
-	max-width: 768px;
-	padding: 0 6px 0 10px;
-}
-.search{
-	max-width: 100%;
-	padding: 0;
 }
 input.search-box{
 	width: 100%;
@@ -181,10 +175,10 @@ span.input-group-addon{
 	}
 }
 
-.table-bordered th{
-	border : 0 !important;
-}
-.table-bordered td{
+.table-bordered th, .table-bordered td, .table-bordered thead{
+	border-bottom: 1px solid #34998F;
+	border-right: 0;
+	border-left: 0;
 
 }
 .react-bs-table-bordered{
