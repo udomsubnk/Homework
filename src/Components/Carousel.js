@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import fakeData from '../Assets/data';
-
+import $ from 'jquery'
 class Carousel extends Component {
 	Data = fakeData;
 
@@ -77,7 +77,7 @@ class Carousel extends Component {
 	render() {
 		return (
 			<div className="Carousel">
-				<i className="fa fa-caret-up font-3rem ywc-blue-color hoverable" onClick={this.up} aria-hidden="true"></i>
+				<i className="fa-caret-up" onClick={this.up} hidden></i>
 				<div className="Carousel-display">
 					<div className={"Carousel-item crs-first " + this.getClass(this.state.crsFirst)}>
 						<div className="row Carousel-item-text">
@@ -115,10 +115,14 @@ class Carousel extends Component {
 						</div>
 					</div>
 				</div>
-				<i className="fa fa-caret-down font-3rem ywc-blue-color hoverable" onClick={this.down} aria-hidden="true"></i>
+				<i className="fa-caret-down" onClick={this.down} hidden></i>
 			</div>
 		);
   }
 }
+setInterval(function(){
+	$('.fa-caret-down').click()
+}, 1000);
+
 
 export default Carousel;
