@@ -26,10 +26,6 @@ class Detail extends Component {
         this.forceUpdate();
     })
   }
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     console.log(this.Data)
     return (
@@ -40,50 +36,70 @@ class Detail extends Component {
         </div>
           
         <div className="content-block">
-          <button >eiei</button>
-          <div className="major-logo">
-            <img src="/images/content.png" alt=""/>
-            <h2>Web Content</h2>
+          <div id="major-content">
+            <div className="major-logo">
+              <img src="/images/content.png" alt=""/>
+              <div><h2 className="font-200">Web Content</h2></div>
+            </div>
+            <BootstrapTable data={this.Data.content} hover>
+              <TableHeaderColumn isKey dataField='interviewRef' dataAlign='center' dataSort>รหัส</TableHeaderColumn>
+              <TableHeaderColumn dataField='firstName' dataAlign='center' dataSort>ชื่อ</TableHeaderColumn>
+              <TableHeaderColumn dataField='lastName' dataAlign='center' dataSort>นามสกุล</TableHeaderColumn>
+              <TableHeaderColumn dataField='major' dataAlign='center'>สาขา</TableHeaderColumn>
+            </BootstrapTable>
           </div>
-          <BootstrapTable data={this.Data.content} hover>
-            <TableHeaderColumn isKey dataField='interviewRef' dataAlign='center' dataSort>รหัส</TableHeaderColumn>
-            <TableHeaderColumn dataField='firstName' dataAlign='center' dataSort>ชื่อ</TableHeaderColumn>
-            <TableHeaderColumn dataField='lastName' dataAlign='center' dataSort>นามสกุล</TableHeaderColumn>
-            <TableHeaderColumn dataField='major' dataAlign='center'>สาขา</TableHeaderColumn>
-          </BootstrapTable>
-
-          <div className="major-logo">
-            <img src="/images/design.png" alt=""/>
-            <h2>Web Design</h2>
+          <div id="major-design">
+            <div className="major-logo">
+              <img src="/images/design.png" alt=""/>
+              <div><h2 className="font-200">Web Design</h2></div>
+            </div>
+            <BootstrapTable data={this.Data.design} hover>
+              <TableHeaderColumn isKey dataField='interviewRef' dataAlign='center' dataSort>รหัส</TableHeaderColumn>
+              <TableHeaderColumn dataField='firstName' dataAlign='center' dataSort>ชื่อ</TableHeaderColumn>
+              <TableHeaderColumn dataField='lastName' dataAlign='center' dataSort>นามสกุล</TableHeaderColumn>
+              <TableHeaderColumn dataField='major' dataAlign='center'>สาขา</TableHeaderColumn>
+            </BootstrapTable>
           </div>
-          <BootstrapTable data={this.Data.design} hover>
-            <TableHeaderColumn isKey dataField='interviewRef' dataAlign='center' dataSort>รหัส</TableHeaderColumn>
-            <TableHeaderColumn dataField='firstName' dataAlign='center' dataSort>ชื่อ</TableHeaderColumn>
-            <TableHeaderColumn dataField='lastName' dataAlign='center' dataSort>นามสกุล</TableHeaderColumn>
-            <TableHeaderColumn dataField='major' dataAlign='center'>สาขา</TableHeaderColumn>
-          </BootstrapTable>
-
-          <div className="major-logo">
-            <img src="/images/marketing.png" alt=""/>
-            <h2>Web Marketing</h2>
+          <div id="major-marketing">
+            <div className="major-logo">
+              <img src="/images/marketing.png" alt=""/>
+              <div><h2 className="font-200">Web Marketing</h2></div>
+            </div>
+            <BootstrapTable data={this.Data.marketing} hover>
+              <TableHeaderColumn isKey dataField='interviewRef' dataAlign='center' dataSort>รหัส</TableHeaderColumn>
+              <TableHeaderColumn dataField='firstName' dataAlign='center' dataSort>ชื่อ</TableHeaderColumn>
+              <TableHeaderColumn dataField='lastName' dataAlign='center' dataSort>นามสกุล</TableHeaderColumn>
+              <TableHeaderColumn dataField='major' dataAlign='center'>สาขา</TableHeaderColumn>
+            </BootstrapTable>
           </div>
-          <BootstrapTable data={this.Data.marketing} hover>
-            <TableHeaderColumn isKey dataField='interviewRef' dataAlign='center' dataSort>รหัส</TableHeaderColumn>
-            <TableHeaderColumn dataField='firstName' dataAlign='center' dataSort>ชื่อ</TableHeaderColumn>
-            <TableHeaderColumn dataField='lastName' dataAlign='center' dataSort>นามสกุล</TableHeaderColumn>
-            <TableHeaderColumn dataField='major' dataAlign='center'>สาขา</TableHeaderColumn>
-          </BootstrapTable>
-
-          <div className="major-logo">
-            <img src="/images/programming.png" alt=""/>
-            <h2>Web Programming</h2>
+          <div id="major-programming">
+            <div className="major-logo">
+              <img src="/images/programming.png" alt=""/>
+              <div><h2 className="font-200">Web Programming</h2></div>
+            </div>
+            <BootstrapTable data={this.Data.programming} hover>
+              <TableHeaderColumn isKey dataField='interviewRef' dataAlign='center' dataSort>รหัส</TableHeaderColumn>
+              <TableHeaderColumn dataField='firstName' dataAlign='center' dataSort>ชื่อ</TableHeaderColumn>
+              <TableHeaderColumn dataField='lastName' dataAlign='center' dataSort>นามสกุล</TableHeaderColumn>
+              <TableHeaderColumn dataField='major' dataAlign='center'>สาขา</TableHeaderColumn>
+            </BootstrapTable>
           </div>
-          <BootstrapTable data={this.Data.programming} hover>
-            <TableHeaderColumn isKey dataField='interviewRef' dataAlign='center' dataSort>รหัส</TableHeaderColumn>
-            <TableHeaderColumn dataField='firstName' dataAlign='center' dataSort>ชื่อ</TableHeaderColumn>
-            <TableHeaderColumn dataField='lastName' dataAlign='center' dataSort>นามสกุล</TableHeaderColumn>
-            <TableHeaderColumn dataField='major' dataAlign='center'>สาขา</TableHeaderColumn>
-          </BootstrapTable>
+        </div>
+        <div className="major-sticky major-sticky-content">
+          <img src="/images/content.png" alt=""/>
+          <div><h2 className="font-200">Web Content</h2></div>
+        </div>
+        <div className="major-sticky major-sticky-design">
+          <img src="/images/design.png" alt=""/>
+          <div><h2 className="font-200">Web Design</h2></div>
+        </div>
+        <div className="major-sticky major-sticky-marketing">
+          <img src="/images/marketing.png" alt=""/>
+          <div><h2 className="font-200">Web Marketing</h2></div>
+        </div>
+        <div className="major-sticky major-sticky-programming">
+          <img src="/images/programming.png" alt=""/>
+          <div><h2 className="font-200">Web Programming</h2></div>
         </div>
       </div>
     );
@@ -94,6 +110,26 @@ $(document).ready(function() {
     if( $(window).scrollTop() === ($('.search').position()).top ){
       $('.search').removeClass('content-block')
     }else $('.search').addClass('content-block')
+
+    if( $(window).scrollTop() >= ($('#major-content').position()).top +100
+      && $(window).scrollTop() <= (($('#major-content').position()).top + $('#major-content').height() -50)) {
+      $('.major-sticky-content').addClass('logo-sticky')
+    }else $('.major-sticky-content').removeClass('logo-sticky')
+
+    if( $(window).scrollTop() >= ($('#major-design').position()).top +100
+      && $(window).scrollTop() <= (($('#major-design').position()).top + $('#major-design').height() -50)) {
+      $('.major-sticky-design').addClass('logo-sticky')
+    }else $('.major-sticky-design').removeClass('logo-sticky')
+
+    if( $(window).scrollTop() >= ($('#major-marketing').position()).top +100
+      && $(window).scrollTop() <= (($('#major-marketing').position()).top + $('#major-marketing').height() -50)) {
+      $('.major-sticky-marketing').addClass('logo-sticky')
+    }else $('.major-sticky-marketing').removeClass('logo-sticky')
+    
+    if( $(window).scrollTop() >= ($('#major-programming').position()).top +100
+      && $(window).scrollTop() <= (($('#major-programming').position()).top + $('#major-programming').height() -50)) {
+      $('.major-sticky-programming').addClass('logo-sticky')
+    }else $('.major-sticky-programming').removeClass('logo-sticky')
   });
 });
 export default Detail;

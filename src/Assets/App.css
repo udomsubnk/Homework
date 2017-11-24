@@ -187,3 +187,13 @@ span.input-group-addon{
 .table-hover tbody tr:hover{
 	background-color: rgba(90,254,237, 0.1);
 }
+.major-logo > img{
+	height: 100px;
+	display: inline-block;
+}
+.logo-sticky{
+	display: block;
+	position: fixed;
+	left: 0;
+	top: 20px;
+}
