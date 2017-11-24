@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import fakeData from '../Assets/data';
-import _ from 'lodash';
 import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
+import _ from 'lodash';
+import $ from 'jquery';
 
 class Detail extends Component {
   Data = fakeData;
@@ -26,10 +27,11 @@ class Detail extends Component {
     this.forceUpdate();
   }
   render() {
+    document.getElementsByClassName('search').position
     return (
       <div>
         <div className="content-block">
-          <div className="input-group search">
+          <div className="input-group search sticky-top">
             <span className="input-group-addon"><i className="fa fa-search" aria-hidden="true"></i></span>
             <input type="text" className="form-control search-box" placeholder="ค้นหาด้วย ชื่อ,สาขา"/>
           </div>
