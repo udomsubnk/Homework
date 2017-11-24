@@ -187,6 +187,12 @@ span.input-group-addon{
 .table-hover tbody tr:hover{
 	background-color: rgba(90,254,237, 0.1);
 }
+#major-all{
+	display: none;
+}
+#major-all > h2{
+	margin: 20px 0;
+}
 .major-logo > img{
 	height: 100px;
 	display: inline-block;
@@ -196,4 +202,7 @@ span.input-group-addon{
 	position: fixed;
 	left: 0;
 	top: 20px;
+}
+.inline-block{
+	display: inline-block;
 }
