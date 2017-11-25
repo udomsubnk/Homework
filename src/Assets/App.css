@@ -105,6 +105,9 @@
 	margin: auto;
 	padding: 0 6px 0 10px;
 }
+.mgt-40px{
+	margin-top: 40px;
+}
 .flexbox{
 	display: flex;
 }
@@ -194,7 +197,7 @@ span.input-group-addon{
 		margin-top: 10px;
 	}
 }
-@media (max-height: 600px){
+@media (max-height: 700px){
 	.hidden-vh-less{
 		display: none !important;
 	}
@@ -244,6 +247,7 @@ span.input-group-addon{
 	font-size: 1.5rem;
 	font-weight: bold;
 	color: #5AFEED;
+	margin-top: 40px;
 }
 .logo-sticky{
 	display: block !important;
@@ -281,9 +285,6 @@ a{
 a:hover{
 	color: #fff;
 }
-.contact{
-	margin-top: 20px;
-}
 .alt{
 	font-size: 0.8rem;
 }
@@ -304,6 +305,11 @@ a:hover{
 	font-size: 0.9rem;
 	font-weight: 400;
 	color: #e2e2e2;
+}
+.post-something{
+	font-size: 2rem;
+	font-weight: 200;
+	color: #E0F357;
 }
 input.input-card-content{
 	margin-top: 40px;

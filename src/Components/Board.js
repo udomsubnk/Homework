@@ -43,7 +43,7 @@ class Board extends Component {
     return (
 		<div className="Board">
 			<div className="content-block">
-				<h2 className="font-2rem font-200">โพสต์อะไรสักหน่อยสิ..</h2>
+				<h2 className="post-something">โพสต์อะไรสักหน่อยสิ..</h2>
 				<Cards data={ this.getData }></Cards>
 				<input type="text" name="content" className="input-card-content" placeholder="โพสอะไรสักหน่อยสิ.."/>
 				<input type="text" name="name" className="input-card-name" placeholder="คุณคือใคร.."/>

@@ -25,21 +25,21 @@ class Detail extends Component {
 		        	<p className="alt">อาคาร ซี.พี.ทาวเวอร์ 1 (สีลม)</p>
         		</div>
         	</div>
-        	<div className="row contact">
-						<div className="col-sm-12 col-md-7">
-							<p className="emphasize">หมายเหตุ</p>
-							<p>
-								สำหรับน้อง ๆ ที่ไม่สะดวกเดินทางมาสัมภาษณ์ที่อาคาร CP Tower สีลม ให้ 
-								 <a href="https://www.facebook.com/messages/t/179319488780193"> <u>Inbox มาทางเพจเฟสบุ๊ค Young Webmaster Camp</u></a> 
-							</p>
-							<p>ภายในวันที่ 20 พฤศจิกายน 2560</p>
-						</div>
-						<div className="col-sm-12 col-md-5">
-							<p className="emphasize">สอบถามเพิ่มเติมติดต่อ</p>
-							<p><span className="emphasize">พี่เบ๊บ:</span> 064-174-7080</p>
-							<p><span className="emphasize">พี่ฟง:</span> 092-458-7067</p>
-							<p><span className="emphasize">พี่เบนซ์:</span> 085-666-7571</p>
-						</div>
+        	<div className="row">
+				<div className="col-sm-12 col-md-7">
+					<p className="detail-header">หมายเหตุ</p>
+					<p>
+						สำหรับน้อง ๆ ที่ไม่สะดวกเดินทางมาสัมภาษณ์ที่อาคาร CP Tower สีลม ให้ 
+						 <a href="https://www.facebook.com/messages/t/179319488780193"> <u>Inbox มาทางเพจเฟสบุ๊ค Young Webmaster Camp</u></a> 
+					</p>
+					<p>ภายในวันที่ 20 พฤศจิกายน 2560</p>
+				</div>
+				<div className="col-sm-12 col-md-5">
+					<p className="detail-header">สอบถามเพิ่มเติมติดต่อ</p>
+					<p><span className="emphasize">พี่เบ๊บ:</span> 064-174-7080</p>
+					<p><span className="emphasize">พี่ฟง:</span> 092-458-7067</p>
+					<p><span className="emphasize">พี่เบนซ์:</span> 085-666-7571</p>
+				</div>
         	</div>
         </div>
       </div>
