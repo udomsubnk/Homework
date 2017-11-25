@@ -52,7 +52,7 @@ class Detail extends Component {
   }
   createCustomExportCSVButton = (onClick) => {
     return (
-      <button className="export-btn btn btn-success" onClick={ onClick }>ส่งออก CSV</button>
+      <button className="export-btn btn btn-success" onClick={ onClick }><i className="fa fa-download" aria-hidden="true"></i> ส่งออก CSV</button>
     );
   }
   render() {
@@ -68,7 +68,7 @@ class Detail extends Component {
       onRowClick: onRowClick
     };
     return (
-      <div>
+      <div className="Announce">
         <div className="majors-sticky">
           <div className="major-sticky major-sticky-content">
             <img src="/images/content.png" alt=""/>

@@ -17,17 +17,16 @@ class Carousel extends Component {
 		})
 	}
 	constructor(props) {
-	    super(props);
-	    this.state = {
-	    	crsFirst: 0,
-	    	crsSecond: 1,
-	    	crsThird: 2,
-	    	crsFourth: 3,
-	    	crsFifth: 4
-	    };
-
-	    this.up = this.up.bind(this);
-	    this.down = this.down.bind(this);
+    super(props);
+    this.state = {
+    	crsFirst: 0,
+    	crsSecond: 1,
+    	crsThird: 2,
+    	crsFourth: 3,
+    	crsFifth: 4
+    };
+    this.up = this.up.bind(this);
+    this.down = this.down.bind(this);
 	}
 	getName = function(index){
 		return this.Data[index].firstName + '	' + this.Data[index].lastName;
@@ -35,17 +34,17 @@ class Carousel extends Component {
   	getCode = function(index){
 		return this.Data[index].interviewRef;
  	}
-  	getMajor = function(index){
+	getMajor = function(index){
 		return this.Data[index].major;
-  	}
-  	getClass = function(index){
+	}
+	getClass = function(index){
 		if ( this.Data[index].firstName === undefined )
 			return 'hide';
 		else return '';
-  	}
-  	getMajorColor = function(index){
-			return this.Data[index].major + "-color";
-  	}
+	}
+	getMajorColor = function(index){
+		return this.Data[index].major + "-color";
+	}
 	up = function(e){
 		e.preventDefault();
 		if( this.state.crsFirst > 0 ){
@@ -75,6 +74,11 @@ class Carousel extends Component {
 		}
 	}
 	render() {
+  	const viewAnnounce = function(){
+  		$('html, body').animate({
+	        scrollTop: ($(".Announce").offset().top -50 )
+	    }, 1000);
+  	}
 		return (
 			<div className="Carousel">
 				<i className="fa-caret-up" onClick={this.up} hidden></i>
@@ -93,7 +97,7 @@ class Carousel extends Component {
 							<div className={"col hidden-xs " + this.getMajorColor(this.state.crsSecond)}>{this.getMajor(this.state.crsSecond)}</div>
 						</div>
 					</div>
-					<div className={"Carousel-item crs-third " + this.getClass(this.state.crsThird)}>
+					<div className={"Carousel-item crs-third " + this.getClass(this.state.crsThird)} onClick={ viewAnnounce }>
 						<div className="row Carousel-item-text">
 							<div className="col hidden-xs">{this.getCode(this.state.crsThird)}</div>
 							<div className="col-sm-6 col-xs-12">{this.getName(this.state.crsThird)}</div>
