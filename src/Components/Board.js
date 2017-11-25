@@ -3,6 +3,26 @@ import * as firebase from 'firebase';
 import $ from 'jquery';
 
 class Board extends Component {
+	postsData = [];
+	componentDidMount(){
+		let posts = [];
+		firebase.database().ref('posts/').on('value', (snapshot) => {
+			snapshot.forEach((childSnapshot) => {
+				posts.push(childSnapshot.val());
+			});
+			this.postsData = posts;
+			this.forceUpdate();
+		});
+	}
+	constructor(props) {
+		super(props);
+		firebase.initializeApp(this.config);
+
+		this.state = {
+			userPosts : []
+		}
+    this.push = this.push.bind(this);
+	}
 	config = {
 	  apiKey: "AIzaSyCe1Ob0ZCwBlZF2BFMceRWnxIimL511NJE",
 	  authDomain: "ywchomework-95d78.firebaseapp.com",
@@ -11,17 +31,10 @@ class Board extends Component {
 	  storageBucket: "",
 	  messagingSenderId: "985406016798"
 	};
-	constructor(props) {
-		super(props);
-
-    this.push = this.push.bind(this);
-    // this.config = this.config.bind(this);
-	}
 	push = function(){
-		firebase.initializeApp(this.config);
-		  firebase.database().ref('posts/').push({
-		    name: $('input[name="name"]').val(),
-		    content: $('input[name="content"]').val()
+		firebase.database().ref('posts/').push({
+	    name: $('input[name="name"]').val(),
+	    content: $('input[name="content"]').val()
 		});
 	}
   render() {
