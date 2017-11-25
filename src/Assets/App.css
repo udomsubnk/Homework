@@ -192,6 +192,8 @@ span.input-group-addon{
 }
 .table-hover tbody tr:hover{
 	background-color: rgba(90,254,237, 0.1);
+	font-size: 2rem;
+	cursor: pointer;
 }
 #major-all{
 	display: none;

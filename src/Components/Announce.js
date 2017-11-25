@@ -29,6 +29,7 @@ class Detail extends Component {
   constructor(props) {
     super(props);
     this.search = this.search.bind(this);
+    this.onRowClick = this.onRowClick.bind(this);
   }
   search = function(e){
     const input = e.target.value.toLowerCase();
@@ -41,11 +42,18 @@ class Detail extends Component {
       $('#major-content,#major-design,#major-marketing,#major-programming').hide()
       $('#major-all').show()
 
-      this.Data.all = _.filter(this.Data.all, (o) =>{ return o.firstName.indexOf(input)==0 || o.lastName.indexOf(input)==0 || o.major.indexOf(input)==0 || o.interviewRef.toLowerCase().indexOf(input)==0 })
+      this.Data.all = _.filter(this.Data.all, (o) =>{ return o.firstName.indexOf(input)===0 || o.lastName.indexOf(input)===0 || o.major.indexOf(input)===0 || o.interviewRef.toLowerCase().indexOf(input)===0 })
     }
     this.forceUpdate();
   }
+  onRowClick = function(){
+    console.log('eiei')
+  }
   render() {
+    const options = {
+        onRowClick: this.onRowClick,
+        onMouseEnter: this.onRowClick
+    };
     return (
       <div>
         <div className="majors-sticky">
@@ -77,8 +85,8 @@ class Detail extends Component {
               <img src="/images/content.png" alt=""/>
               <div><h2 className="font-200 font-2rem">Web Content</h2></div>
             </div>
-            <BootstrapTable data={this.Data.content} hover>
-              <TableHeaderColumn isKey dataField='interviewRef' dataAlign='center' dataSort>รหัส</TableHeaderColumn>
+            <BootstrapTable data={this.Data.content} options={ options } hover>
+              <TableHeaderColumn isKey={ true } dataField='interviewRef' dataAlign='center' dataSort>รหัส</TableHeaderColumn>
               <TableHeaderColumn dataField='firstName' dataAlign='center' dataSort>ชื่อ</TableHeaderColumn>
               <TableHeaderColumn dataField='lastName' dataAlign='center' dataSort>นามสกุล</TableHeaderColumn>
               <TableHeaderColumn dataField='major' dataAlign='center'>สาขา</TableHeaderColumn>
