@@ -259,3 +259,15 @@ span.input-group-addon{
 	color: #408FB9;
 	font-weight: 400;
 }
+a{
+	color: #fff;
+}
+a:hover{
+	color: #fff;
+}
+.contact{
+	margin-top: 20px;
+}
+.alt{
+	font-size: 0.8rem;
+}
