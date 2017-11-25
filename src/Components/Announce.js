@@ -158,7 +158,7 @@ class Detail extends Component {
 }
 $(document).ready(function() {
   $(window).scroll(function(event) {
-    if( $(window).scrollTop() === ($('.search').position()).top -60 ){
+    if( $(window).scrollTop() === ($('.search').position()).top -10 ){
       $('.search').removeClass('content-block')
     }else $('.search').addClass('content-block')
 
