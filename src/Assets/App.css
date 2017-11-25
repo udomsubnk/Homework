@@ -77,6 +77,9 @@
 .font-2rem{
 	font-size: 2rem !important;
 }
+.font-1_5rem{
+	font-size: 1.5rem !important;
+}
 .font-1_2rem{
 	font-size: 1.2rem !important;
 }
@@ -85,6 +88,10 @@
 }
 .font-0_7rem{
 	font-size: 0.7rem !important;
+}
+.text-left{
+	text-align: left;
+	justify-content: left;
 }
 .color-e2e2e2{
 	color: #e2e2e2;
@@ -216,6 +223,13 @@ span.input-group-addon{
 .majors-sticky{
 	width: 100%;
 }
+.detail-header{
+	text-align: center;
+	justify-content: center;
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: #5AFEED;
+}
 .logo-sticky{
 	display: block !important;
 	position: fixed;
@@ -232,4 +246,16 @@ span.input-group-addon{
 }
 .export-btn{
 	z-index: -1;
+}
+.emphasize{
+	color: #5AFEED;
+	font-weight: 400;
+}
+.green{
+	color: #1FB42C;
+	font-weight: 400;
+}
+.blue{
+	color: #408FB9;
+	font-weight: 400;
 }
