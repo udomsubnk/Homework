@@ -120,9 +120,20 @@ class Carousel extends Component {
 		);
   }
 }
-setInterval(function(){
-	$('.fa-caret-down').click()
-}, 1000);
+let i = 0, c = 0, btn = '';
+$(document).ready(function() {
+	setInterval(function(){
+		if(i === 220){
+			btn = 'up'
+			c = -1;
+		}else if(i === 0){
+			btn = 'down'
+			c = 1;
+		}
+		$('.fa-caret-'+btn).click();
+		i += c;
+	}, 1000);
+});
 
 
 export default Carousel;

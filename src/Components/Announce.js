@@ -31,16 +31,19 @@ class Detail extends Component {
     this.search = this.search.bind(this);
   }
   search = function(e){
-    const input = e.target.value;
+    const input = e.target.value.toLowerCase();
     console.log(input)
     if( input === '' || input === undefined || input === null){
       $('#major-content,#major-design,#major-marketing,#major-programming').show()
       $('#major-all').hide()
+      this.Data.all = this.backupData.slice()
     }else{
       $('#major-content,#major-design,#major-marketing,#major-programming').hide()
       $('#major-all').show()
-    }
 
+      this.Data.all = _.filter(this.Data.all, (o) =>{ return o.firstName.indexOf(input)==0 || o.lastName.indexOf(input)==0 || o.major.indexOf(input)==0 || o.interviewRef.toLowerCase().indexOf(input)==0 })
+    }
+    this.forceUpdate();
   }
   render() {
     console.log(this.Data)
