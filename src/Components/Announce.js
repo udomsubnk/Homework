@@ -141,7 +141,7 @@ $(document).ready(function() {
     }
     else $('.search').addClass('content-block')
 
-    if( $(window).scrollTop() >= ($('#major-content').position()).top
+    if( $(window).scrollTop() >= ($('#major-content').position()).top -100
       && $(window).scrollTop() <= (($('#major-content').position()).top + $('#major-content').height() )) {
       $('.major-sticky-content').addClass('logo-sticky')
     }else $('.major-sticky-content').removeClass('logo-sticky')
