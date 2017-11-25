@@ -19,7 +19,7 @@ class Cards extends Component {
 	}
   render() {
     return (
-      <div className="Cards row content-block">
+      <div className="Cards row">
       		{ this.cards }
       </div>
     );

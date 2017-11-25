@@ -41,11 +41,11 @@ class Board extends Component {
 	}
   render() {
     return (
-			<div className="Board">
+			<div className="Board content-block">
 				<Cards data={ this.getData }></Cards>
-				<input type="text" name="name"/>
-				<input type="text" name="content"/>
-				<button onClick={ this.push }></button>
+				<input type="text" name="content" className="input-card-content" placeholder="โพสอะไรสักหน่อยสิ.."/>
+				<input type="text" name="name" className="input-card-name" placeholder="คุณคือใคร.."/>
+				<button onClick={ this.push } className="post-btn">โพสต์</button>
 			</div>
     );
   }
