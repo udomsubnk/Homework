@@ -290,7 +290,7 @@ a:hover{
 .Card{
 	background: url(/images/bg.png) 0% 0% / contain repeat;
 	height: 100px;
-	border: 1px solid #5AFEED;
+	border: 1px solid #E0F357;
 	border-radius: 5px;
 	font-size: 1.2rem;
 	padding: 10px;
@@ -306,13 +306,13 @@ a:hover{
 	color: #e2e2e2;
 }
 input.input-card-content{
-	margin-top: 30px;
+	margin-top: 40px;
 	width: 30%;
 	height: 40px;
 	font-size: 1.2rem;
 	background-color:rgba(0,0,0,0) !important;
 	color: #fff;
-	border: 1px solid #5AFEED;
+	border: 1px solid #E0F357;
 	padding: 0 20px;
    	border-radius: 3px;
 }
@@ -320,7 +320,7 @@ input.input-card-content::placeholder{
 	color: #e2e2e2;
 }
 input.input-card-content:focus{
-	border: 1px solid #5AFEED !important;
+	border: 1px solid #E0F357 !important;
 }
 input.input-card-name{
 	width: 30%;
@@ -328,7 +328,7 @@ input.input-card-name{
 	font-size: 1.2rem;
 	background-color:rgba(0,0,0,0) !important;
 	color: #fff;
-	border: 1px solid #5AFEED;
+	border: 1px solid #E0F357;
 	padding: 0 20px;
    	border-radius: 3px;
    	border-left: 0;
@@ -337,12 +337,12 @@ input.input-card-name::placeholder{
 	color: #e2e2e2;
 }
 input.input-card-name:focus{
-	border: 1px solid #5AFEED !important;
+	border: 1px solid #E0F357 !important;
 }
 .post-btn{
 	height: 40px;
 	width: 80px;
-	border: 1px solid #5AFEED;
+	border: 1px solid #E0F357;
 	border-radius: 3px;
 	margin-left: 20px;
 	color: #fff;
@@ -381,6 +381,7 @@ input.input-card-name:focus{
     padding: 0;
     border: 1px solid #5AFEED;
     width: 80%;
+    max-width: 900px;
     animation: animatetop 0.4s;;
 	background: url(/images/bg.png) 0% 0% / contain repeat;
 	border-radius: 20px;

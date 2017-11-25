@@ -14,9 +14,6 @@ class Cards extends Component {
   	}
   	this.forceUpdate();
 	}
-	constructor(props) {
-		super(props)
-	}
   render() {
     return (
       <div className="Cards row">
