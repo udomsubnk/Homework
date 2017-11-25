@@ -46,9 +46,26 @@ class Detail extends Component {
     this.forceUpdate();
   }
   render() {
-    console.log(this.Data)
     return (
       <div>
+        <div className="majors-sticky">
+          <div className="major-sticky major-sticky-content">
+            <img src="/images/content.png" alt=""/>
+            <div><h2 className="font-200 font-2rem">Web Content</h2></div>
+          </div>
+          <div className="major-sticky major-sticky-design">
+            <img src="/images/design.png" alt=""/>
+            <div><h2 className="font-200 font-2rem">Web Design</h2></div>
+          </div>
+          <div className="major-sticky major-sticky-marketing">
+            <img src="/images/marketing.png" alt=""/>
+            <div><h2 className="font-200 font-2rem">Web Marketing</h2></div>
+          </div>
+          <div className="major-sticky major-sticky-programming">
+            <img src="/images/programming.png" alt=""/>
+            <div><h2 className="font-200 font-2rem">Web Programming</h2></div>
+          </div>
+        </div>
         <div className="input-group search sticky-top content-block">
           <span className="input-group-addon"><i className="fa fa-search" aria-hidden="true"></i></span>
           <input type="text" className="form-control search-box" placeholder="ค้นหาด้วย ชื่อ,สาขา" onChange={this.search}/>
@@ -113,51 +130,36 @@ class Detail extends Component {
             </BootstrapTable>
           </div>
         </div>
-        <div className="major-sticky major-sticky-content">
-          <img src="/images/content.png" alt=""/>
-          <div><h2 className="font-200 font-2rem">Web Content</h2></div>
-        </div>
-        <div className="major-sticky major-sticky-design">
-          <img src="/images/design.png" alt=""/>
-          <div><h2 className="font-200 font-2rem">Web Design</h2></div>
-        </div>
-        <div className="major-sticky major-sticky-marketing">
-          <img src="/images/marketing.png" alt=""/>
-          <div><h2 className="font-200 font-2rem">Web Marketing</h2></div>
-        </div>
-        <div className="major-sticky major-sticky-programming">
-          <img src="/images/programming.png" alt=""/>
-          <div><h2 className="font-200 font-2rem">Web Programming</h2></div>
-        </div>
       </div>
     );
   }
 }
 $(document).ready(function() {
   $(window).scroll(function(event) {
-    if( $(window).scrollTop() === ($('.search').position()).top ){
+    if( $(window).scrollTop() === ($('.search').position()).top -60 ){
       $('.search').removeClass('content-block')
-    }else $('.search').addClass('content-block')
+    }
+    else $('.search').addClass('content-block')
 
-    // if( $(window).scrollTop() >= ($('#major-content').position()).top +100
-    //   && $(window).scrollTop() <= (($('#major-content').position()).top + $('#major-content').height() -50)) {
-    //   $('.major-sticky-content').addClass('logo-sticky')
-    // }else $('.major-sticky-content').removeClass('logo-sticky')
+    if( $(window).scrollTop() >= ($('#major-content').position()).top
+      && $(window).scrollTop() <= (($('#major-content').position()).top + $('#major-content').height() )) {
+      $('.major-sticky-content').addClass('logo-sticky')
+    }else $('.major-sticky-content').removeClass('logo-sticky')
 
-    // if( $(window).scrollTop() >= ($('#major-design').position()).top +100
-    //   && $(window).scrollTop() <= (($('#major-design').position()).top + $('#major-design').height() -50)) {
-    //   $('.major-sticky-design').addClass('logo-sticky')
-    // }else $('.major-sticky-design').removeClass('logo-sticky')
+    if( $(window).scrollTop() >= ($('#major-design').position()).top
+      && $(window).scrollTop() <= (($('#major-design').position()).top + $('#major-design').height() )) {
+      $('.major-sticky-design').addClass('logo-sticky')
+    }else $('.major-sticky-design').removeClass('logo-sticky')
 
-    // if( $(window).scrollTop() >= ($('#major-marketing').position()).top +100
-    //   && $(window).scrollTop() <= (($('#major-marketing').position()).top + $('#major-marketing').height() -50)) {
-    //   $('.major-sticky-marketing').addClass('logo-sticky')
-    // }else $('.major-sticky-marketing').removeClass('logo-sticky')
+    if( $(window).scrollTop() >= ($('#major-marketing').position()).top
+      && $(window).scrollTop() <= (($('#major-marketing').position()).top + $('#major-marketing').height() )) {
+      $('.major-sticky-marketing').addClass('logo-sticky')
+    }else $('.major-sticky-marketing').removeClass('logo-sticky')
 
-    // if( $(window).scrollTop() >= ($('#major-programming').position()).top +100
-    //   && $(window).scrollTop() <= (($('#major-programming').position()).top + $('#major-programming').height() -50)) {
-    //   $('.major-sticky-programming').addClass('logo-sticky')
-    // }else $('.major-sticky-programming').removeClass('logo-sticky')
+    if( $(window).scrollTop() >= ($('#major-programming').position()).top
+      && $(window).scrollTop() <= (($('#major-programming').position()).top + $('#major-programming').height() )) {
+      $('.major-sticky-programming').addClass('logo-sticky')
+    }else $('.major-sticky-programming').removeClass('logo-sticky')
   });
 });
 export default Detail;

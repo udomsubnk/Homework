@@ -129,10 +129,16 @@
 .search{
 	width: 100%;
 	margin: auto;
+	background-color: rgba(25, 31, 38 ,1);
+	top: 60px;
+}
+.search.content-block{
+	background-color: rgba(0,0,0 ,0);
+
 }
 input.search-box{
 	width: 100%;
-	height: 40px;
+	height: 47px;
 	font-size: 1.2rem;
 	background-color:rgba(0,0,0,0) !important;
 	color: #fff;
@@ -195,13 +201,25 @@ span.input-group-addon{
 }
 .major-logo > img{
 	height: 100px;
+}
+.major-sticky{
+	display: none;
+}
+.major-sticky > img{
+	height: 60px;
+}
+.major-sticky > div{
 	display: inline-block;
 }
+.majors-sticky{
+	width: 100%;
+}
 .logo-sticky{
-	display: block;
+	display: block !important;
 	position: fixed;
-	left: 0;
-	top: 20px;
+	top: 0px;
+	width: inherit;
+	background-color: rgba(25, 31, 38 ,1);
 }
 .inline-block{
 	display: inline-block;
