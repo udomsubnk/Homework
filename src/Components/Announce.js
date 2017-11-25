@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import fakeData from '../Assets/data';
-import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
+import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
 import _ from 'lodash';
 import $ from 'jquery'
 class Detail extends Component {
@@ -29,7 +29,8 @@ class Detail extends Component {
   constructor(props) {
     super(props);
     this.search = this.search.bind(this);
-    this.onRowClick = this.onRowClick.bind(this);
+    this.onExportToCSV = this.onExportToCSV.bind(this);
+    this.createCustomExportCSVButton = this.createCustomExportCSVButton.bind(this);
   }
   search = function(e){
     const input = e.target.value.toLowerCase();
@@ -46,13 +47,25 @@ class Detail extends Component {
     }
     this.forceUpdate();
   }
-  onRowClick = function(){
-    console.log('eiei')
+  onExportToCSV = function(row){
+    return this.backupData;
+  }
+  createCustomExportCSVButton = (onClick) => {
+    return (
+      <button className="export-btn btn btn-success" onClick={ onClick }>ส่งออก CSV</button>
+    );
   }
   render() {
+    const onRowClick = function(e){
+      console.log(e)
+    }
+    const contentOptions = {
+      onRowClick: onRowClick,
+      onExportToCSV: this.onExportToCSV,
+      exportCSVBtn: this.createCustomExportCSVButton
+    };
     const options = {
-        onRowClick: this.onRowClick,
-        onMouseEnter: this.onRowClick
+      onRowClick: onRowClick
     };
     return (
       <div>
@@ -85,7 +98,7 @@ class Detail extends Component {
               <img src="/images/content.png" alt=""/>
               <div><h2 className="font-200 font-2rem">Web Content</h2></div>
             </div>
-            <BootstrapTable data={this.Data.content} options={ options } hover>
+            <BootstrapTable data={this.Data.content} options={ contentOptions } hover exportCSV>
               <TableHeaderColumn isKey={ true } dataField='interviewRef' dataAlign='center' dataSort>รหัส</TableHeaderColumn>
               <TableHeaderColumn dataField='firstName' dataAlign='center' dataSort>ชื่อ</TableHeaderColumn>
               <TableHeaderColumn dataField='lastName' dataAlign='center' dataSort>นามสกุล</TableHeaderColumn>
@@ -97,7 +110,7 @@ class Detail extends Component {
               <img src="/images/design.png" alt=""/>
               <div><h2 className="font-200 font-2rem">Web Design</h2></div>
             </div>
-            <BootstrapTable data={this.Data.design} hover>
+            <BootstrapTable data={this.Data.design} options={ options } hover>
               <TableHeaderColumn isKey dataField='interviewRef' dataAlign='center' dataSort>รหัส</TableHeaderColumn>
               <TableHeaderColumn dataField='firstName' dataAlign='center' dataSort>ชื่อ</TableHeaderColumn>
               <TableHeaderColumn dataField='lastName' dataAlign='center' dataSort>นามสกุล</TableHeaderColumn>
@@ -109,7 +122,7 @@ class Detail extends Component {
               <img src="/images/marketing.png" alt=""/>
               <div><h2 className="font-200 font-2rem">Web Marketing</h2></div>
             </div>
-            <BootstrapTable data={this.Data.marketing} hover>
+            <BootstrapTable data={this.Data.marketing} options={ options } hover>
               <TableHeaderColumn isKey dataField='interviewRef' dataAlign='center' dataSort>รหัส</TableHeaderColumn>
               <TableHeaderColumn dataField='firstName' dataAlign='center' dataSort>ชื่อ</TableHeaderColumn>
               <TableHeaderColumn dataField='lastName' dataAlign='center' dataSort>นามสกุล</TableHeaderColumn>
@@ -121,7 +134,7 @@ class Detail extends Component {
               <img src="/images/programming.png" alt=""/>
               <div><h2 className="font-200 font-2rem">Web Programming</h2></div>
             </div>
-            <BootstrapTable data={this.Data.programming} hover>
+            <BootstrapTable data={this.Data.programming} options={ options } hover>
               <TableHeaderColumn isKey dataField='interviewRef' dataAlign='center' dataSort>รหัส</TableHeaderColumn>
               <TableHeaderColumn dataField='firstName' dataAlign='center' dataSort>ชื่อ</TableHeaderColumn>
               <TableHeaderColumn dataField='lastName' dataAlign='center' dataSort>นามสกุล</TableHeaderColumn>
@@ -130,7 +143,7 @@ class Detail extends Component {
           </div>
           <div id="major-all">
             <h2 className="font-200 font-2rem">ผลการค้นหา..</h2>
-            <BootstrapTable data={this.Data.all} hover>
+            <BootstrapTable data={this.Data.all} options={ options } hover>
               <TableHeaderColumn isKey dataField='interviewRef' dataAlign='center' dataSort>รหัส</TableHeaderColumn>
               <TableHeaderColumn dataField='firstName' dataAlign='center' dataSort>ชื่อ</TableHeaderColumn>
               <TableHeaderColumn dataField='lastName' dataAlign='center' dataSort>นามสกุล</TableHeaderColumn>
