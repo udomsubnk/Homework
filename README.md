@@ -1,6 +1,6 @@
 # YWC15-homework
 
-> Use ReactJS for this project
+> PG10 - อุดมทรัพย์ หน่ายคอน Programming
 
 ## Requirement
 
