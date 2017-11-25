@@ -168,15 +168,25 @@ span.input-group-addon{
 	justify-content: center;
 }
 
-@media (max-width: 576px){
+@media (max-width: 700px){
 	.font-3rem{
 		font-size: 2.2rem !important;
 	}
 	.font-2rem{
-		font-size: 1.2rem !important;
+		font-size: 2rem !important;
 	}
 	.hidden-xs{
 		display: none !important;
+	}
+	input.input-card-content{
+		width: 45% !important;
+	}
+	input.input-card-name{
+		width: 45% !important;
+	}
+	.post-btn{
+		margin-left: 0px !important;
+		margin-top: 10px;
 	}
 }
 @media (max-height: 600px){

@@ -41,12 +41,15 @@ class Board extends Component {
 	}
   render() {
     return (
-			<div className="Board content-block">
+		<div className="Board">
+			<div className="content-block">
+				<h2 className="font-2rem font-200">กระดานระบายใจ</h2>
 				<Cards data={ this.getData }></Cards>
 				<input type="text" name="content" className="input-card-content" placeholder="โพสอะไรสักหน่อยสิ.."/>
 				<input type="text" name="name" className="input-card-name" placeholder="คุณคือใคร.."/>
 				<button onClick={ this.push } className="post-btn">โพสต์</button>
 			</div>
+		</div>
     );
   }
 }
