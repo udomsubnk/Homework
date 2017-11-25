@@ -5,14 +5,12 @@ import $ from 'jquery'
 class Carousel extends Component {
 	Data = fakeData;
 
-	componentWillMount(){
+	componentDidMount(){
 		axios.get('https://ywc15.ywc.in.th/api/interview')
 		.then( response => {
 		    this.Data = response.data;
-		    this.Data.unshift('')
-		    this.Data.unshift('')
-		    this.Data.push('')
-		    this.Data.push('')
+		    this.Data.unshift('','')
+		    this.Data.push('','')
 		    this.forceUpdate();
 		})
 	}

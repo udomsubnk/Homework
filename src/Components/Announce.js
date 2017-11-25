@@ -9,7 +9,7 @@ class Detail extends Component {
     all : fakeData
   }
   backupData = fakeData;
-  componentWillMount(){
+  componentDidMount(){
     axios.get('https://ywc15.ywc.in.th/api/interview')
     .then( response => {
         this.Data.all = response.data;
@@ -87,6 +87,7 @@ class Detail extends Component {
             <div><h2 className="font-200 font-2rem">Web Programming</h2></div>
           </div>
         </div>
+        <h2 className="font-2rem font-200">รายชื่อผู้ผ่านเข้ารอบสัมภาษณ์</h2>
         <div className="input-group search sticky-top content-block">
           <span className="input-group-addon"><i className="fa fa-search" aria-hidden="true"></i></span>
           <input type="text" className="form-control search-box" placeholder="ค้นหาด้วย ชื่อ,สาขา" onChange={this.search}/>
