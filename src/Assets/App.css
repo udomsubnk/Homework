@@ -194,7 +194,7 @@ span.input-group-addon{
 		margin-top: 10px;
 	}
 }
-@media (max-height: 600px){
+@media (max-height: 700px){
 	.hidden-vh-less{
 		display: none !important;
 	}
@@ -304,6 +304,11 @@ a:hover{
 	font-size: 0.9rem;
 	font-weight: 400;
 	color: #e2e2e2;
+}
+.post-something{
+	font-size: 2rem;
+	font-weight: 200;
+	color: #E0F357;
 }
 input.input-card-content{
 	margin-top: 40px;

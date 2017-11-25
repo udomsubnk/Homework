@@ -45,6 +45,23 @@ class Detail extends Component {
 
       this.Data.all = _.filter(this.Data.all, (o) =>{ return o.firstName.indexOf(input)===0 || o.lastName.indexOf(input)===0 || o.major.indexOf(input)===0 || o.interviewRef.toLowerCase().indexOf(input)===0 })
     }
+    if(this.Data.all.length === 1){
+      $('span[name="interviewRef"]').text(this.Data.all[0].interviewRef);
+      $('span[name="firstname"]').text(this.Data.all[0].firstName);
+      $('span[name="lastname"]').text(this.Data.all[0].lastName);
+      $('span[name="major"]').text(this.Data.all[0].major);
+      var modal = document.getElementById('modal');
+      modal.style.display = "block";
+      var span = document.getElementsByClassName("close-btn")[0];
+      span.onclick = function() {
+          modal.style.display = "none";
+      }
+      window.onclick = function(event) {
+          if (event.target === modal) {
+              modal.style.display = "none";
+          }
+      }
+    }
     this.forceUpdate();
   }
   onExportToCSV = function(row){
