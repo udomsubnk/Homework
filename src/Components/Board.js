@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
+import Cards from './Cards';
 import * as firebase from 'firebase';
 import $ from 'jquery';
 
 class Board extends Component {
 	postsData = [];
-	componentDidMount(){
-		let posts = [];
+	componentWillMount(){
 		firebase.database().ref('posts/').on('value', (snapshot) => {
+			let posts = [];
 			snapshot.forEach((childSnapshot) => {
 				posts.push(childSnapshot.val());
 			});
@@ -18,10 +19,8 @@ class Board extends Component {
 		super(props);
 		firebase.initializeApp(this.config);
 
-		this.state = {
-			userPosts : []
-		}
-    this.push = this.push.bind(this);
+	    this.push = this.push.bind(this);
+	    this.getData = this.getData.bind(this);
 	}
 	config = {
 	  apiKey: "AIzaSyCe1Ob0ZCwBlZF2BFMceRWnxIimL511NJE",
@@ -37,9 +36,13 @@ class Board extends Component {
 	    content: $('input[name="content"]').val()
 		});
 	}
+	getData = function(){
+		return this.postsData.slice();
+	}
   render() {
     return (
 			<div className="Board">
+				<Cards data={ this.getData }></Cards>
 				<input type="text" name="name"/>
 				<input type="text" name="content"/>
 				<button onClick={ this.push }></button>

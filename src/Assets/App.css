@@ -271,3 +271,31 @@ a:hover{
 .alt{
 	font-size: 0.8rem;
 }
+.Card{
+	background: url(/images/bg.png) 0% 0% / contain repeat;
+	height: 100px;
+	border: 1px solid #5AFEED;
+	border-radius: 5px;
+	font-size: 1.2rem;
+	padding: 10px;
+	margin-top: 20px;
+	animation: card-in ease 1s;
+}
+.Card-content{
+	margin-top: 10px;
+}
+.Card-name{
+	font-size: 0.9rem;
+	font-weight: 400;
+	color: #e2e2e2;
+}
+@keyframes card-in{
+	0%{
+		opacity: 0;
+		transform: translateX(250px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
