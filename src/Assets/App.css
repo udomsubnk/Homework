@@ -290,13 +290,14 @@ a:hover{
 }
 .Card{
 	background: url(/images/bg.png) 0% 0% / contain repeat;
-	height: 100px;
+	min-height: 100px;
 	border: 1px solid #E0F357;
 	border-radius: 5px;
 	font-size: 1.2rem;
 	padding: 10px;
 	margin-top: 20px;
 	animation: card-in ease 1s;
+	word-break: break-all;
 }
 .Card-content{
 	margin-top: 10px;

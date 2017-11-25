@@ -32,9 +32,11 @@ class Board extends Component {
 	};
 	push = function(){
 		firebase.database().ref('posts/').push({
-	    name: $('input[name="name"]').val(),
-	    content: $('input[name="content"]').val()
+	    	name: $('input[name="name"]').val(),
+	    	content: $('input[name="content"]').val()
 		});
+		$('input[name="name"]').val('');
+		$('input[name="content"]').val('');
 	}
 	getData = function(){
 		return this.postsData.slice();
