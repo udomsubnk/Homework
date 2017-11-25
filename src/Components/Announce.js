@@ -56,8 +56,22 @@ class Detail extends Component {
     );
   }
   render() {
-    const onRowClick = function(e){
-      console.log(e)
+    const onRowClick = function(e){ 
+      $('span[name="interviewRef"]').text(e.interviewRef);
+      $('span[name="firstname"]').text(e.firstName);
+      $('span[name="lastname"]').text(e.lastName);
+      $('span[name="major"]').text(e.major);
+      var modal = document.getElementById('modal');
+      modal.style.display = "block";
+      var span = document.getElementsByClassName("close-btn")[0];
+      span.onclick = function() {
+          modal.style.display = "none";
+      }
+      window.onclick = function(event) {
+          if (event.target === modal) {
+              modal.style.display = "none";
+          }
+      }
     }
     const contentOptions = {
       onRowClick: onRowClick,
@@ -152,6 +166,27 @@ class Detail extends Component {
             </BootstrapTable>
           </div>
         </div>
+
+        <div id="modal" className="modal">
+          <div className="modal-content text-center">
+            <div className="modal-header text-center">
+              <h2 className="font-2rem font-200">ขอแสดงความยินดี</h2>
+            </div>
+            <div className="modal-body">
+              <p className="emphasize font-2rem font-200">
+                <span name="interviewRef"></span>&nbsp;&nbsp; 
+                <span name="firstname"></span>&nbsp;&nbsp;
+                <span name="lastname"></span>&nbsp;&nbsp;
+                <span name="major"></span>&nbsp;&nbsp;
+                </p>
+              <p>ได้ผ่านเข้าสู่รอบสัมภาษณ์โครงการ Young Webmaster Camp#15<sup>th</sup></p>
+            </div>
+            <div className="modal-footer text-center">
+              <button className="close-btn">ปิดหน้าต่าง</button>
+            </div>
+          </div>
+        </div>
+
       </div>
     );
   }
