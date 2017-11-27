@@ -22,3 +22,20 @@ npm install
 # serve at localhost:3000
 npm start
 ```
+
+## Screenshorts
+
+> Landing
+![alt text](https://raw.githubusercontent.com/udomsubnk/Homework/master/screenshort/landing.png)
+
+> Deatil
+![alt text](https://raw.githubusercontent.com/udomsubnk/Homework/master/screenshort/detail.png)
+
+> Post board
+![alt text](https://raw.githubusercontent.com/udomsubnk/Homework/master/screenshort/board.png)
+
+> Announce Table
+![alt text](https://raw.githubusercontent.com/udomsubnk/Homework/master/screenshort/announce.png)
+
+> Search and alert
+![alt text](https://raw.githubusercontent.com/udomsubnk/Homework/master/screenshort/search-alert.png)
